@@ -2,55 +2,61 @@
   {
     "title": "HTML",
     "image": "html.png",
-    "description": "Linguagem de marcação usada para estruturar páginas web.",
+    "description": "HTML (HyperText Markup Language) é a linguagem de marcação padrão para criar páginas web.\nPermite estruturar conteúdo com elementos como headings, parágrafos, listas, links e imagens.\nÉ a base de qualquer site, sendo interpretada pelos navegadores para renderizar a página.",
     "rating": 4
   },
   {
     "title": "CSS",
     "image": "css.png",
-    "description": "Usado para estilizar e definir o layout das páginas web.",
+    "description": "CSS (Cascading Style Sheets) é responsável pela apresentação visual das páginas web.\nControla cores, fontes, espaçamentos, layouts e animações.\nPermite separar o design do conteúdo HTML, facilitando manutenção e responsividade.",
     "rating": 4
   },
   {
     "title": "Tailwind CSS",
     "image": "tailwind.png",
-    "description": "Framework CSS utilitário para criar interfaces modernas rapidamente.",
+    "description": "Tailwind CSS é um framework utilitário que acelera o desenvolvimento de interfaces modernas.\nOferece classes prontas para estilização direta no HTML, sem escrever CSS customizado.\nÉ altamente personalizável e promove consistência no design de projetos.",
     "rating": 5
   },
   {
     "title": "JavaScript",
     "image": "javascript.png",
-    "description": "Linguagem de programação para criar interatividade no frontend.",
+    "description": "JavaScript é a linguagem de programação essencial para interatividade no frontend.\nPermite manipular o DOM, lidar com eventos e fazer requisições assíncronas.\nÉ executada diretamente no navegador e fundamental para aplicações web dinâmicas.",
     "rating": 5
   },
   {
     "title": "TypeScript",
     "image": "typescript.png",
-    "description": "Superset do JavaScript que adiciona tipagem estática.",
+    "description": "TypeScript é um superset do JavaScript que adiciona tipagem estática ao código.\nAjuda a detectar erros em tempo de compilação e melhora a manutenção de projetos grandes.\nÉ amplamente usado em frameworks como React, Angular e Next.js.",
     "rating": 5
   },
   {
     "title": "JSON",
     "image": "json.png",
-    "description": "Formato leve para troca de dados entre sistemas.",
+    "description": "JSON (JavaScript Object Notation) é um formato leve para troca de dados.\nÉ fácil de ler e escrever tanto para humanos quanto para máquinas.\nUsado principalmente em APIs para comunicação entre cliente e servidor.",
     "rating": 4
   },
   {
     "title": "API RESTful",
     "image": "api.png",
-    "description": "Arquitetura para comunicação entre cliente e servidor via HTTP.",
+    "description": "API RESTful segue princípios arquiteturais para comunicação via HTTP.\nUtiliza métodos como GET, POST, PUT e DELETE para operações CRUD.\nÉ stateless, escalável e amplamente adotada em aplicações web modernas.",
     "rating": 4
   },
   {
     "title": "Swagger",
     "image": "swagger.png",
-    "description": "Ferramenta para documentação e teste de APIs.",
+    "description": "Swagger (agora OpenAPI) é uma ferramenta para documentar e testar APIs.\nGera documentação interativa automaticamente a partir do código.\nFacilita o entendimento e consumo de endpoints por desenvolvedores.",
     "rating": 3
   },
   {
     "title": "GitHub",
     "image": "github.png",
-    "description": "Plataforma para versionamento de código e colaboração.",
+    "description": "GitHub é a principal plataforma para controle de versão com Git.\nPermite hospedagem de repositórios, colaboração em equipe e revisão de código.\nInclui recursos como Issues, Pull Requests e Actions para automação.",
     "rating": 5
+  },
+  {
+    "title": "Java",
+    "image": "java.png",
+    "description": "Java é uma linguagem de programação orientada a objetos, robusta e multiplataforma.\nExecutada na JVM (Java Virtual Machine), permite 'escreva uma vez, execute em qualquer lugar'.\nAmplamente usada em aplicações empresariais, Android e backend com frameworks como Spring.",
+    "rating": 4
   }
 ]

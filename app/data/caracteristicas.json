@@ -1,0 +1,42 @@
+[
+  {
+    "titulo": "JSX",
+    "resumo": "Sintaxe que mistura HTML e JavaScript.",
+    "detalhes": "JSX permite escrever estruturas de interface de forma declarativa dentro do JavaScript, facilitando a leitura, manutenção e integração direta com lógica e dados."
+  },
+  {
+    "titulo": "Componentes",
+    "resumo": "Funções que retornam JSX.",
+    "detalhes": "Componentes são blocos independentes e reutilizáveis que encapsulam estrutura, estilo e comportamento, permitindo construir interfaces complexas de forma organizada."
+  },
+  {
+    "titulo": "Reutilização e Modularidade",
+    "resumo": "Componentes reutilizáveis e modulares.",
+    "detalhes": "A modularização permite reutilizar componentes em diferentes partes da aplicação, reduzindo duplicação de código e facilitando manutenção e escalabilidade."
+  },
+  {
+    "titulo": "Roteamento",
+    "resumo": "Roteamento automático e APIs.",
+    "detalhes": "O Next.js cria rotas automaticamente com base na estrutura de pastas, incluindo páginas, rotas dinâmicas e APIs, simplificando a arquitetura do projeto."
+  },
+  {
+    "titulo": "Hooks",
+    "resumo": "useState, useEffect e useSWR.",
+    "detalhes": "Hooks permitem gerenciar estado, efeitos colaterais e dados assíncronos de forma simples e funcional, sem necessidade de classes."
+  },
+  {
+    "titulo": "Performance e SEO",
+    "resumo": "Renderização rápida e SEO friendly.",
+    "detalhes": "Com SSR, SSG e ISR, o Next.js entrega páginas rápidas, indexáveis por mecanismos de busca e otimizadas para performance."
+  },
+  {
+    "titulo": "TypeScript",
+    "resumo": "Seguro e escalável.",
+    "detalhes": "TypeScript adiciona tipagem estática ao JavaScript, reduzindo erros em tempo de desenvolvimento e tornando o código mais previsível e escalável."
+  },
+  {
+    "titulo": "Comunidade",
+    "resumo": "Ativa e popular.",
+    "detalhes": "O ecossistema React e Next.js possui vasta documentação, bibliotecas, suporte da comunidade e adoção massiva no mercado."
+  }
+]

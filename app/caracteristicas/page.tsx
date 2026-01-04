@@ -1,34 +1,26 @@
 "use client";
 
-const Caracteristicas = () => {
-    const caracteristicas = [
-        'JSX, sintaxe que mistura HTML e JS.',
-        'Componentes, funções que retornam JSX.',
-        'Componentes Reutilizáveis e Modulares.',
-        'Roteamento Automático e APIs.',
-        'Hooks: useState, useEffect e useSWR.',
-        'Renderização Rápida e SEO Friendly.',
-        'TypeScript Seguro e Escalável.',
-        'Comunidade Ativa e Popularidade.'
-    ];
+import caracteristicas from "@/app/data/caracteristicas.json";
+import Caracteristica from "@/components/caracteristicas/Caracteristicas";
 
-    function handleClick() {
-        alert("AAAAAA EU ODEIO WEB")
-    }
+export default function Caracteristicas() {
+  return (
+    <div className="min-h-screen bg-black py-12 px-6">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-4xl font-bold text-white text-center mb-12">
+          Características do React e Next.js
+        </h2>
 
-    return (
-        <div>
-            <h2>Características do React e Next.js</h2>
-
-            <ul>
-                {caracteristicas.map((item, index) => (
-                    <li key={index}>{item}</li>
-                ))}
-            </ul>
-
-            <button className="bg-black-300" onClick={handleClick}>clica aqui</button>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {caracteristicas.map((item, index) => (
+            <Caracteristica
+              key={index}
+              texto={item.resumo}
+              index={index}
+            />
+          ))}
         </div>
-    );
-};
-
-export default Caracteristicas;
+      </div>
+    </div>
+  );
+}
