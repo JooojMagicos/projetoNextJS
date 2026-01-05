@@ -30,7 +30,7 @@ export default async function TecnologiaPage({
           ← Voltar às tecnologias
         </Link>
 
-        <TecnologiaDetailsCard tech={tech} />
+        <TecnologiaDetailsCard tech={tech} index={index} />
       </div>
     </div>
   );

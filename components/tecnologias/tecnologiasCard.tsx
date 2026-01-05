@@ -1,5 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import ContadorPersonalizado from "@/components/contador/ContadorLikes";
 
 interface TecnologiaCardProps {
   title: string;
@@ -7,27 +9,40 @@ interface TecnologiaCardProps {
   index: number;
 }
 
-export default function TecnologiaCard({ title, image, index }: TecnologiaCardProps) {
+export default function TecnologiaCard({
+  title,
+  image,
+  index,
+}: TecnologiaCardProps) {
   return (
-    <Link href={`/tecnologia/${index}`}>
-      <div className="w-30 h-40 bg-gray-900 rounded-2xl shadow-xl border border-gray-800 flex flex-col items-center justify-between p-8 hover:border-gray-600 hover:shadow-2xl transition-all duration-300 cursor-pointer">
-        {/* Imagem centralizada e responsiva */}
-        <div className="flex-1 flex items-center justify-center">
+    <Link href={`/tecnologias/${index}`}>
+      <div className="w-30 h-60 bg-gray-900 rounded-2xl shadow-xl border border-gray-800 flex flex-col items-center p-6 hover:border-gray-600 transition">
+
+        {/* Conteúdo flexível */}
+        <div className="flex-1 flex flex-col items-center justify-center">
           <Image
             src={`/tecnologias/${image}`}
             alt={title}
-            width={100}
-            height={100}
-            className="max-w-full max-h-full object-contain"
+            width={80}
+            height={80}
+            className="object-contain"
             unoptimized
           />
+
+          <h3 className="text-base font-semibold text-white text-center mt-3">
+            {title}
+          </h3>
         </div>
 
-        {/* Título sempre na parte de baixo, centralizado */}
-        <h3 className="text-lg font-semibold text-white text-center mt-4">
-          {title}
-        </h3>
+        {/* Footer fixo */}
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className="mt-2"
+        >
+          <ContadorPersonalizado id={index} />
+        </div>
       </div>
+
     </Link>
   );
 }
