@@ -3,6 +3,7 @@ import "./globals.css";
 import Link from "next/link";
 import Relogio from "@/components/relogio/Relogio";
 import { CartProvider } from "@/context/CartContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata: Metadata = {
   title: "React & Next.js",
@@ -24,7 +25,7 @@ export default function RootLayout({
             <div className="text-left">
               <Relogio />
             </div>
-
+            
             <div className="flex flex-col items-center gap-4">
               <h1 className="text-4xl font-bold text-white">
                 React & Next.js
@@ -48,7 +49,7 @@ export default function RootLayout({
         <main className="flex-1 flex items-start justify-center px-6 py-12">
           <div className="w-full max-w-4xl bg-gray-950 rounded-3xl shadow-2xl p-10 lg:p-14 border border-gray-800">
             
-        
+    
             <CartProvider>
               {children}
             </CartProvider>

@@ -1,0 +1,63 @@
+"use client";
+
+type Props = {
+  ordem: "asc" | "desc";
+  onChange: (ordem: "asc" | "desc") => void;
+};
+
+export default function Ordenador({ ordem, onChange }: Props) {
+  return (
+    <select
+      value={ordem}
+      onChange={(e) => onChange(e.target.value as "asc" | "desc")}
+      style={{ padding: 8, width: "100%", marginBottom: 20 }}
+    >
+      <option value="asc">Ordenar por nome (A → Z)</option>
+      <option value="desc">Ordenar por nome (Z → A)</option>
+    </select>
+  );
+}
+"use client";
+import { useState } from "react";
+import Ordenador from "@/components/Ordenador";
+
+type Pessoa = {
+  id: number;
+  nome: string;
+  idade: number;
+};
+
+export default function Page() {
+  const pessoasJson: Pessoa[] = [
+    { id: 1, nome: "Carlos", idade: 30 },
+    { id: 2, nome: "Ana", idade: 22 },
+    { id: 3, nome: "Bruno", idade: 27 },
+    { id: 4, nome: "Daniel", idade: 35 },
+  ];
+
+  const [ordem, setOrdem] = useState<"asc" | "desc">("asc");
+
+  const pessoasOrdenadas = [...pessoasJson].sort((a, b) => {
+    return ordem === "asc"
+      ? a.nome.localeCompare(b.nome)
+      : b.nome.localeCompare(a.nome);
+  });
+
+  return (
+    <div style={{ padding: 40, maxWidth: 500 }}>
+      <h1>Lista de Pessoas</h1>
+
+      {/* Componente de ordenação */}
+      <Ordenador ordem={ordem} onChange={setOrdem} />
+
+      {/* Lista */}
+      <ul>
+        {pessoasOrdenadas.map((pessoa) => (
+          <li key={pessoa.id}>
+            {pessoa.nome} — {pessoa.idade} anos
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
